@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Repair LBX Files App</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" />
+    
+</head>
+<body>
+    
+    <div class="container">
+        <div class="jumbotron">
+            <p class="alert alert-info" id="drag-file">Drag your file here.</p>
+        </div>
+    </div>
+
+    <div id="status"></div>
+
+    <hr />
+
+    <small>We are using NodeJS <script>document.write(process.version)</script>
+    and Electron <script>document.write(process.versions['electron'])</script>.</small>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./gui-funct.js"></script>
+    <script>
+
+        // GLUE to the screen
+        function getCommandOutput() {
+            return document.getElementById("command-output");
+        };
+        function getStatus(){
+            return document.getElementById("status");
+        };
+        // End of GLUE
+
+        //backgroundProcess();
+    </script>
+
+</body>
+</html>
