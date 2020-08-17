@@ -1,6 +1,6 @@
 {
   "name": "electron-app-lbx-repair",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An HTML5 stand alone app using GitHub Electron (Chrome engine + Node.js) to help repair LBX Files",
   "main": "main.js",
   "scripts": {
