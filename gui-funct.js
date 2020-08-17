@@ -35,6 +35,15 @@ ipcRenderer.on('fileData', (event, data) => {
 
     child.on('error', function(err) {
         console.log('stderr: <' + err + '>');
+
+        const execFile = process.execFile;
+        const child = execFile('sh', ['./zip_to_lbx.sh'], (error, stdout, stderr) => {
+            if (error) {
+                throw error;
+            }
+            console.log(stdout);
+        });
+
     });
 
     child.stdout.on('data', function(data) {
@@ -42,7 +51,7 @@ ipcRenderer.on('fileData', (event, data) => {
     });
 
     child.stderr.on('data', function(data) {
-        console.log('stderr: <' + data + '>');
+        console.log('stddata: <' + data + '>');
     });
 
     child.on('close', function(code) {
