@@ -5,7 +5,15 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.kilukrumedia.electron-app-lbx-repair",
+    "mac": {
+      "category": "public.app-category.developer-tools"
+    }
   },
   "repository": {
     "type": "git",
@@ -24,14 +32,15 @@
   },
   "homepage": "https://github.com/alfreddagenais/app-lbx-repair#readme",
   "devDependencies": {
+    "electron-builder": "^22.8.0",
     "electron-packager": "^15.0.0",
-    "electron-prebuilt": "^0.32.2"
+    "electron-prebuilt": "^0.32.2",
+    "electron": "^9.1.2"
   },
   "dependencies": {
     "app": "^0.1.0",
     "browser-window": "^0.4.0",
     "child_process": "^1.0.2",
-    "electron": "^9.1.2",
     "electron-is": "^3.0.0",
     "fs": "0.0.1-security",
     "jquery": "^3.5.1",
